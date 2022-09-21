@@ -8,19 +8,6 @@ html, body{
     background-image: url(../Preentrega-1/imagenes/fondo-1.jpg);
 }
 
-body{
-    height: 100%;
-    display: grid;
-    grid-template-areas: 
-    "header header"
-    "header header"
-    "contenido contenido"
-    "contenido contenido"
-    "footer footer";
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 100px auto 100px;
-}
-
 .Imagenes{
     width: 200px;
     height: 200px;
@@ -94,11 +81,23 @@ footer{
     color: white;
 }
 
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "header header"
+    "contenido contenido"
+    "contenido contenido"
+    "footer footer";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 100px auto 100px;
+}
+
 @media screen and (max-width:767px){
     .Imagenes{
         width: 150px;
-        height: 150px;
-        margin-left:auto;
+        height: 135px;
+        margin-left: auto;
         margin-right: auto;
     }
 }
@@ -130,6 +129,19 @@ section#Contenido{
 .Imagenes{
     width: 150px;
     height: 135px;
+}
+
+header{
+    grid-area: header;
+    background-color:rgb(49, 10, 1);
+    display: flex;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right:0px;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+
 }
 
 }
