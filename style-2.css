@@ -9,30 +9,11 @@ body {
     background-image: url(img/fondo-1.jpg);
 }
 
-.Imagenes {
-    width: 200px;
-    height: 200px;
-    animation-name: aparecer;
-    animation-iteration-count: 1;
-    animation-duration: 5s;
-}
-
-@keyframes aparecer {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-section#Contenido {
-    grid-area: contenido;
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
-    grid-template-rows: repeat(2, 250px);
-
+section#productos {
+    grid-area: productos;
+    
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     grid-column-gap: 10px;
@@ -48,7 +29,6 @@ header {
     padding-right: 25px;
     align-items: center;
 }
-
 
 footer {
     grid-area: footer;
@@ -83,55 +63,81 @@ footer {
     color: white;
 }
 
+.imagenes__productos{
+    height: 200px;
+    width: 250px;
+    margin-top: 15px;
+}
+
+.Texto_imagenes{
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+    color:white;
+    animation-name: aparecer;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+}
+
+.Precio{
+    text-align: center;
+    color:rgb(69, 192, 69);
+    margin-top: -15px;
+    margin-bottom: 15px;
+    animation-name: aparecer;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 body {
     display: grid;
     grid-template-areas:
         "header header"
         "header header"
-        "contenido contenido"
-        "contenido contenido"
+        "productos productos"
+        "productos productos"
+        "productos productos"
+        "productos productos"
         "footer footer";
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 100px auto 100px;
-}
-
-@media screen and (max-width:767px) {
-    .Imagenes {
-        width: 150px;
-        height: 135px;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }
 
 @media screen and (max-width:599px) {
     body {
         grid-template-areas:
             "header"
-            "contenido"
-            "contenido"
-            "contenido"
+            "productos"
+            "productos"
+            "productos"
             "footer"
             "footer";
         grid-template-columns: auto;
         grid-template-rows: repeat(3, 200px);
     }
 
-    section#Contenido {
-        grid-area: contenido;
-        display: grid;
-        grid-template-columns: repeat(2, 150px);
-        grid-template-rows: repeat(3, 150px);
-
+    section#productos {
+        grid-area: productos;
+        display:flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         grid-column-gap: 10px;
         grid-row-gap: 10px;
     }
 
-    .Imagenes {
-        width: 150px;
-        height: 135px;
+    .imagenes__productos{
+       width: 150px;
+       height: 100px;
     }
 
     header {
@@ -146,6 +152,5 @@ body {
         flex-direction: column;
 
     }
-    
 
 }
