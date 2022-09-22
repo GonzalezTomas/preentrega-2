@@ -11,7 +11,7 @@ body {
 
 section#productos {
     grid-area: productos;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,24 +63,24 @@ footer {
     color: white;
 }
 
-.imagenes__productos{
+.imagenes__productos {
     height: 200px;
     width: 250px;
     margin-top: 15px;
 }
 
-.Texto_imagenes{
+.Texto_imagenes {
     text-align: center;
     font-family: 'Amatic SC', cursive;
-    color:white;
+    color: white;
     animation-name: aparecer;
     animation-iteration-count: 1;
     animation-duration: 3s;
 }
 
-.Precio{
+.Precio {
     text-align: center;
-    color:rgb(69, 192, 69);
+    color: rgb(69, 192, 69);
     margin-top: -15px;
     margin-bottom: 15px;
     animation-name: aparecer;
@@ -127,7 +127,7 @@ body {
 
     section#productos {
         grid-area: productos;
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -135,9 +135,9 @@ body {
         grid-row-gap: 10px;
     }
 
-    .imagenes__productos{
-       width: 150px;
-       height: 100px;
+    .imagenes__productos {
+        width: 150px;
+        height: 100px;
     }
 
     header {
